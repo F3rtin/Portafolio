@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Nashio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="space-clouds" aria-hidden="true"></div>
+<div class="space-burst" aria-hidden="true"></div>
+<svg class="space-filters" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="nebula-texture" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.007 0.016" numOctaves="3" seed="18" result="warp-noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="warp-noise" scale="110" xChannelSelector="R" yChannelSelector="G" result="cloud"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.03 0.06" numOctaves="3" seed="31" result="texture"/>
+      <feColorMatrix in="texture" type="matrix" values="0.4 0.1 0.05 0 0.12 0.05 0.4 0.1 0 0.18 0.05 0.15 0.5 0 0.25 0.6 0.6 0.6 0 -0.75" result="colored-texture"/>
+      <feComposite in="colored-texture" in2="cloud" operator="in" result="cloud-texture"/>
+      <feBlend in="cloud" in2="cloud-texture" mode="screen"/>
+    </filter>
+  </defs>
+</svg>
+<div class="space-stars" aria-hidden="true">
+  <span style="--x: 8%; --y: 13%; --size: 2px; --delay: -0.5s; --duration: 2.7s"></span>
+  <span style="--x: 25%; --y: 22%; --size: 1.5px; --delay: -1.6s; --duration: 3.4s"></span>
+  <span style="--x: 43%; --y: 10%; --size: 2px; --delay: -0.9s; --duration: 2.5s"></span>
+  <span style="--x: 65%; --y: 18%; --size: 1.5px; --delay: -2.1s; --duration: 3.2s"></span>
+  <span style="--x: 89%; --y: 12%; --size: 2px; --delay: -1.2s; --duration: 2.9s"></span>
+  <span style="--x: 94%; --y: 37%; --size: 1.5px; --delay: -0.3s; --duration: 3.6s"></span>
+  <span style="--x: 76%; --y: 43%; --size: 2px; --delay: -1.8s; --duration: 2.6s"></span>
+  <span style="--x: 57%; --y: 31%; --size: 1.5px; --delay: -0.7s; --duration: 3.1s"></span>
+  <span style="--x: 35%; --y: 42%; --size: 2px; --delay: -2.4s; --duration: 2.8s"></span>
+  <span style="--x: 12%; --y: 48%; --size: 1.5px; --delay: -1.1s; --duration: 3.5s"></span>
+  <span style="--x: 7%; --y: 70%; --size: 2px; --delay: -2s; --duration: 2.4s"></span>
+  <span style="--x: 28%; --y: 78%; --size: 1.5px; --delay: -0.8s; --duration: 3.3s"></span>
+  <span style="--x: 45%; --y: 67%; --size: 2px; --delay: -1.5s; --duration: 2.9s"></span>
+  <span style="--x: 63%; --y: 79%; --size: 1.5px; --delay: -2.2s; --duration: 3.7s"></span>
+  <span style="--x: 82%; --y: 72%; --size: 2px; --delay: -0.4s; --duration: 2.5s"></span>
+  <span style="--x: 93%; --y: 88%; --size: 1.5px; --delay: -1.9s; --duration: 3.2s"></span>
+  <span style="--x: 53%; --y: 91%; --size: 2px; --delay: -0.6s; --duration: 2.8s"></span>
+  <span style="--x: 34%; --y: 89%; --size: 1.5px; --delay: -1.3s; --duration: 3.5s"></span>
+</div>
+<section class="hero-section" aria-label="Inicio">
+  <h1 class="hero-title">
+    <span class="hero-title__line">Un <span class="hero-title__emphasis">capricho</span></span>
+    <span class="hero-title__line">hecho <span class="hero-title__emphasis">diseño</span></span>
+  </h1>
+</section>
+<section class="text-section" aria-label="Segunda sección">
+  <div class="about-content">
+    <h2 class="text-heading">
+      <span class="text-heading__star" aria-hidden="true">★</span>
+      <span class="text-heading__text">Sobre mi</span>
+      <span class="text-heading__star" aria-hidden="true">★</span>
+    </h2>
+    <div class="about-layout">
+      <div class="text-box">
+        <p>★¡Hola! Soy Martín, soy un estudiante de diseño gráfico en la Universidad Diego Portales.</p>
+        <p>Soy de Santiago de Chile, lo cual me ha llevado a conocer un gran margen de gente y formas de ver el mundo, comencé como un artista, me gusta mucho dibujar y tengo el hábito de investigar antes de comenzar a diseñar para llegar a un resultado auténtico.</p>
+        <p>Me manejo con programas de adobe como Illustrator, Indesign y Photoshop al igual que programas de edición de video como CapCut y Sketch Tools.</p>
+        <p>Soy una persona muy organizada y me gusta aplicar eso a mis proyectos, pero al mismo tiempo me gusta agregar detalles fantasiosos a lo que hago.</p>
+        <p>No me gusta ser muy formal.</p>
+      </div>
+      <div class="about-image-frame">
+        <img class="about-image" src="Img/Yo.jpeg" alt="Retrato de Martín">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="text-section text-section--third" aria-label="Tercera sección">
+  <div class="about-content">
+    <div class="about-layout">
+      <div class="score-gallery">
+        <img src="Img/Score1.png" alt="Certificado EnglishScore C1 de Martín">
+        <img src="Img/Score.png" alt="Verificación del certificado EnglishScore">
+      </div>
+      <div class="text-box">
+        <p>★Desde pequeño me ha interesado el inglés y lo he ido aprendiendo naturalmente a través de mi vida. Actualmente soy bilingüe y cuento con una certificación oficial de English Score con nivel C1.</p>
+        <p>Estoy muy en sintonía con el mundo anglófono y tengo la habilidad de hablar naturalmente con personas cuya lengua materna es el ingles</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="project-details" id="projectDetails" aria-live="polite" aria-atomic="true">
+  <article class="project-panel">
+    <h2>Finger Paint</h2>
+    <p>Es un proyecto hecho con MediaPipe y OpenCV que simula un programa de dibujo donde el dedo es el pincel y el color detectado por el programa es la pintura, este funciona a través del uso de la cámara para reconocer la mano al igual que detectar los colores en el ambiente.</p>
+    <h3>Links</h3>
+    <ul class="project-links">
+      <li><a href="https://github.com/F3rtin/finger_paint.git" target="_blank" rel="noopener noreferrer">https://github.com/F3rtin/finger_paint.git</a></li>
+      <li><a href="https://f3rtin.github.io/dos-realidades/" target="_blank" rel="noopener noreferrer">https://f3rtin.github.io/dos-realidades/</a></li>
+    </ul>
+    <video class="project-media" muted loop playsinline preload="metadata" aria-label="Video del proyecto Finger Paint">
+      <source src="Things/Finger.mp4" type="video/mp4">
+    </video>
+  </article>
+  <article class="project-panel" hidden>
+    <h2>Newen</h2>
+    <p>Este proyecto se basa en la creencia mapuche de que “el viento es un mensajero”. A través de una compilación de diferentes voces, estas son atribuidas a los movimientos irracionales que le causa el viento al árbol, imitando así un ambiente familiar que se escucha con cada racha.</p>
+    <h3>Links</h3>
+    <ul class="project-links">
+      <li><a href="https://github.com/F3rtin/Newen.git" target="_blank" rel="noopener noreferrer">https://github.com/F3rtin/Newen.git</a></li>
+      <li><a href="https://f3rtin.github.io/Newen/" target="_blank" rel="noopener noreferrer">https://f3rtin.github.io/Newen/</a></li>
+    </ul>
+    <video class="project-media" muted loop playsinline preload="metadata" aria-label="Video del proyecto Newen">
+      <source src="Things/Newen.mp4" type="video/mp4">
+    </video>
+  </article>
+  <article class="project-panel" hidden>
+    <h2>La estática de la nostalgia</h2>
+    <p>La nostalgia es algo que todos sentimos y este proyecto simula el proceso de sintonizar una televisión antigua con el tacto a través del teléfono, buscando recordar momentos que aunque no estén presentes, siguen vivos en nuestra memoria.</p>
+    <h3>Links</h3>
+    <ul class="project-links">
+      <li><a href="https://github.com/britneyspears-fan/La_estatica_de_la_nostalgia.git" target="_blank" rel="noopener noreferrer">https://github.com/britneyspears-fan/La_estatica_de_la_nostalgia.git</a></li>
+      <li><a href="https://britneyspears-fan.github.io/La_estatica_de_la_nostalgia/exp.html" target="_blank" rel="noopener noreferrer">https://britneyspears-fan.github.io/La_estatica_de_la_nostalgia/exp.html</a></li>
+    </ul>
+  </article>
+  <article class="project-panel" hidden>
+    <h2>Boa Mistura: Colección</h2>
+    <p>Este fue un proyecto editorial donde recopilamos un gran número de las obras del grupo “Boa Mistura”, organizados por continente con 5 obras cada uno, remarcando el proceso creativo, contexto de la obra, inspiraciones, datos y fotografías de sus conceptos y producto final.</p>
+    <iframe class="project-media project-document" src="Things/Boa.pdf#toolbar=0&amp;navpanes=0&amp;view=FitH" title="Boa Mistura: Colección, documento con desplazamiento" loading="lazy"></iframe>
+  </article>
+  <article class="project-panel" hidden>
+    <h2>Ilustraciones</h2>
+    <p>Como dije anteriormente, me gusta el arte y mayormente hago ilustraciones, mi estilo usa líneas redondeadas y colores suaves, pero vibrantes.</p>
+    <p>Mi proceso creativo por lo general suele durar 3 días por ilustración, lo cual incluye:</p>
+    <ul class="project-links">
+      <li>Pensar en una idea.</li>
+      <li>Investigación de referentes.</li>
+      <li>Elección de referentes visuales.</li>
+      <li>Bocetos.</li>
+      <li>Lineart.</li>
+      <li>Colorear.</li>
+      <li>Añadir sombras y luz.</li>
+      <li>Añadir detalles finales.</li>
+    </ul>
+    <div class="project-artworks">
+      <button class="project-artwork is-front" type="button" aria-label="Poner Ilustración 1 al frente" aria-pressed="true">
+        <img src="Things/Ilus%201.jpeg" alt="Ilustración de una pareja con atuendos fantásticos">
+      </button>
+      <button class="project-artwork is-behind" type="button" aria-label="Poner Ilustración 2 al frente" aria-pressed="false">
+        <img src="Things/Ilus%202.jpeg" alt="Retrato ilustrado de una persona con una expresión inquietante">
+      </button>
+    </div>
+  </article>
+</section>
+<main class="project-frame">
+  <div class="star-rotator" id="starRotator">
+    <img src="Img/Star.svg" alt="Star">
+  </div>
+</main>
+<button class="turn-zone turn-zone--left" id="turnLeft" type="button" aria-label="Girar la estrella a la izquierda" aria-keyshortcuts="ArrowLeft"></button>
+<button class="turn-zone turn-zone--right" id="turnRight" type="button" aria-label="Girar la estrella a la derecha" aria-keyshortcuts="ArrowRight"></button>
+<section class="text-section text-section--contact" aria-label="Cuarta sección">
+  <div class="about-content">
+    <h2 class="text-heading">
+      <span class="text-heading__star" aria-hidden="true">★</span>
+      <span class="text-heading__text">Contactame :)</span>
+      <span class="text-heading__star" aria-hidden="true">★</span>
+    </h2>
+    <div class="about-layout">
+      <div class="text-box contact-details">
+        <p>Correo: <a href="mailto:Martin.garcia1@mail.udp.cl">Martin.garcia1@mail.udp.cl</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/Lucky_willy5/" target="_blank" rel="noopener noreferrer">Lucky_willy5</a></p>
+        <p><a href="tel:+56957748942">+56 9 5774 8942</a></p>
+      </div>
+      <div class="about-image-frame contact-signature">
+        <img class="about-image" src="Img/Firma.png" alt="Firma de Martín">
+      </div>
+    </div>
+  </div>
+</section>
+<p class="sr-only" id="turnStatus" role="status" aria-live="polite"></p>
+<script src="star-interaction.js"></script>
+</body>
+</html>
